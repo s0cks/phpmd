@@ -84,7 +84,7 @@ class XMLRenderer extends AbstractRenderer
     public function renderReport(Report $report)
     {
         $writer = $this->getWriter();
-        $writer->write('<pmd version="' . PHPMD::VERSION . '" ');
+        $writer->write('<phpmd version="' . PHPMD::VERSION . '" ');
         $writer->write('timestamp="' . date('c') . '">');
         $writer->write(PHP_EOL);
 
@@ -136,7 +136,7 @@ class XMLRenderer extends AbstractRenderer
             $writer->write('" />' . PHP_EOL);
         }
 
-        $writer->write('</pmd>' . PHP_EOL);
+        $writer->write('</phpmd>' . PHP_EOL);
     }
 
     /**
